@@ -1,1 +1,7 @@
 rm -rf * //to remove all files in directory
+
+to create topic 
+
+~/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic msg
+
+//topic with name msg
