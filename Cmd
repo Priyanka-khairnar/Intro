@@ -1,7 +1,27 @@
 rm -rf * //to remove all files in directory
 
-to create topic 
+mvn eclipse:eclipse -DdownloadSources=true
 
-~/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic msg
+~/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic msg //topic with name msg
 
-//topic with name msg
+ps -ef | grep kafka
+
+bin/kafka-topics.sh --list --zookeeper localhost:2181 //list topics
+------------------------------------------------------------------------------------------------------------
+bin/kafka-server-start.sh config/server.properties  //start server
+
+bin/kafka-console-producer.sh --broker-list localhost:9092 --topic myTopic //start producer
+
+bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic myTopic --from-beginning //start consumer
+------------------------------------------------------------------------------------------------------------
+show dbs
+
+use dbname
+
+db.createCollection(name, options)
+
+show collections
+
+db.collection_name.find() //display values from collection 
+
+db.mycol.find().pretty()
