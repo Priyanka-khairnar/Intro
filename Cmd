@@ -25,3 +25,16 @@ show collections
 db.collection_name.find() //display values from collection 
 
 db.mycol.find().pretty()
+------------------------------------------------------------------------------------------------------------
+/usr/bin/mysql -u root -p --------------->password =opex
+
+show databases;
+
+use dbname;
+
+create table Buyer(BuyerId int not null AUTO_INCREMENT,BuyerName varchar(100)not null,OrderStatus varchar(10),PRIMARY KEY(BuyerId));
+
+create table Suspend(BuyerId int not null PRIMARY KEY,SupendenDate DATE,FOREIGN KEY(BuyerId) REFERENCES Buyer(BuyerId));
+ 
+SELECT VERSION();
+ 
