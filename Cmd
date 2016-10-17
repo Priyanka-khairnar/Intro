@@ -10,7 +10,7 @@ bin/kafka-topics.sh --list --zookeeper localhost:2181 //list topics
 ------------------------------------------------------------------------------------------------------------
 bin/kafka-server-start.sh config/server.properties  //start server
 
-bin/kafka-console-producer.sh --broker-list localhost:9092 --topic myTopic //start producer
+bin/kafka-console-producer.sh --broker-list localhost:9094 --topic myTopic //start producer
 
 bin/kafka-console-consumer.sh --zookeeper localhost:2181 --topic myTopic --from-beginning //start consumer
 ------------------------------------------------------------------------------------------------------------
@@ -38,3 +38,6 @@ create table Suspend(BuyerId int not null PRIMARY KEY,SupendenDate DATE,FOREIGN 
  
 SELECT VERSION();
  
+create table rejectionCount(BuyerId int not null AUTO_INCREMENT,Count int,PRIMARY KEY(BuyerId));
+
+create table blacklist(BuyerId int not null PRIMARY KEY,SupendenDate DATE,FOREIGN KEY(BuyerId) REFERENCES rejectionCount(BuyerId));
