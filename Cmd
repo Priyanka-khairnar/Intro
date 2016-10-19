@@ -47,3 +47,5 @@ create database suspension;
 create table suspended_list(buyer_id varchar(36) not null PRIMARY KEY,supended_date DATE);
 
 create table rejection_count(buyer_id varchar(36) not null,order_rejection_count int,PRIMARY KEY(buyer_id));
+
+create table payment_details(buyer_id varchar(36) not null,status varchar(10),due_date Date,payed_date Date,PRIMARY KEY(buyer_id));
