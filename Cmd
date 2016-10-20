@@ -49,3 +49,6 @@ create table suspended_list(buyer_id varchar(36) not null PRIMARY KEY,supended_d
 create table rejection_count(buyer_id varchar(36) not null,order_rejection_count int,PRIMARY KEY(buyer_id));
 
 create table payment_details(buyer_id varchar(36) not null,status varchar(10),due_date Date,payed_date Date,PRIMARY KEY(buyer_id));
+
+create table organization_details(org_id varchar(36) primary key,org_name varchar(40),org_type varchar(40),org_address varchar(40),org_city varchar(40),org_state varchar(40));
+
