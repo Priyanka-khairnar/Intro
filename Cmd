@@ -61,5 +61,22 @@ Suspension msg
 Organization msg
 
 {"correlation_id" : "1","message_type" : "msg","version" : "1.0.0","originator" : "OraganizationService","payload" : { "id" : "1","name" : "opex","type" : "orgType","registered_address_line_1" : "addressLine1","registered_address_line_2" : "addressLine2","city" : "Pune",  "state" : "Maharashtra","organization_type" : "String"}}
+------------------------------------------------------------------------------------------------------------
+//
+//		try {
+//			JsonNode result = new ObjectMapper().readTree(listString);
+//			//String org_Id = result.get("id").asText();
+//			//logger.info(org_Id);
+//			logger.info(result.asText());
+//			//return result;
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			return null;
+//		}
 
+// ObjectNode node = JsonNodeFactory.instance.objectNode();
+// node.set("id",result.get("id"));
+// node.set("name",result.get("name"));
+// JSONArray json = new JSONArray();
+// return listString;
 
