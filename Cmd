@@ -2,6 +2,8 @@ rm -rf * //to remove all files in directory
 
 mvn eclipse:eclipse -DdownloadSources=true
 
+mvn spring-boot:run
+
 ~/kafka/bin/kafka-topics.sh --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic msg //topic with name msg
 
 ps -ef | grep kafka
