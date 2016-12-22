@@ -8,7 +8,7 @@ mvn spring-boot:run
 
 ps -ef | grep kafka
 
-export GOOGLE_API_KEY=AIzaSyDXjdRabch0WRr6mTgySji1xB3Uno7Jq0Y
+
 ------------------------------------------------------------------------------------------------------------
 bin/kafka-topics.sh --list --zookeeper localhost:2181 //list topics
 ------------------------------------------------------------------------------------------------------------
