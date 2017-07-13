@@ -9,6 +9,8 @@ mvn spring-boot:run
 ps -ef | grep kafka
 
 netstat -tulpn --displays network connections
+
+sudo rpm -ivm package.rpm
 ------------------------------------------------------------------------------------------------------------
 bin/kafka-topics.sh --list --zookeeper localhost:2181 //list topics
 ------------------------------------------------------------------------------------------------------------
