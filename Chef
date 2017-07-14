@@ -1,2 +1,5 @@
 usermod -g wheel user
 
+sudo chef-client --local-mode
+
+
